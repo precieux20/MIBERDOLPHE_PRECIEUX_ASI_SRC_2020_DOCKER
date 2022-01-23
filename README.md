@@ -10,5 +10,5 @@ Clonez le lien GitHub vers un dossier local sur votre ordinateur. Ouvrez le doss
 ```
 docker-compose up -d
 ```
-## Verification de l'application 
+## Vérification de l'application 
 Pour verifier que votre application est bien executée, allez sur http://localhost:3000/
