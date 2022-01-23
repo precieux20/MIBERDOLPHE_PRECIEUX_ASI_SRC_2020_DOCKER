@@ -5,6 +5,8 @@ services:
         build:
             context: ./frontend
             dockerfile: Dockerfile
+        image: monapp-client
+        container_name: monapp-node-client
         tty: true
         ports:
             - "3000:3000"
@@ -17,10 +19,12 @@ services:
       build :
          context: ./backend
          dockerfile: Dockerfile
+      image: monapp-server
+      container_name: monapp-node-server
       ports :
          - "5000:5000"
       volumes:
-         - ./frontend/app
+         - ./backend:/app
          - /app/node_modules
       networks:
          - frontend
